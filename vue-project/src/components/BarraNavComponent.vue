@@ -13,9 +13,9 @@ const toggleDirectivasMenu = () => {
         <nav class="navigation">
             <ul>
                 <li><RouterLink to="/parte-a">Parte A</RouterLink></li>
-                <li class="dropdown"><RouterLink to="/directivas" @click.prevent="toggleDirectivasMenu">Directivas</RouterLink><!--para que cuando apretamos se desplega el menu con toogle-->
+                <li class="dropdown"><RouterLink to="/directivas" @click.prevent="toggleDirectivasMenu">Directivas</RouterLink>
 
-                     <ul v-if="showDirectivasMenu" class="dropdown-menu"> <!--para que el menu desplegable no se ve-->
+                     <ul v-if="showDirectivasMenu" class="dropdown-menu"> 
                     <li><RouterLink to="/directivas/ref-computed">Ref-Computed</RouterLink></li>
                     <li><RouterLink to="/directivas/reactive">Reactive</RouterLink></li>
                     <li><RouterLink to="/directivas/provide">Provide</RouterLink></li>
