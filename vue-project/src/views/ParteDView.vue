@@ -73,7 +73,7 @@ const handleMessage = (msg) => {
   
   </template>
   
-<style>
+<style scoped>
   
 div {
     padding-top: 20px;
