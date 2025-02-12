@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed} from 'vue';
+import { ref, computed, onMounted} from 'vue';
 import { useRoute } from 'vue-router';
 import {reactive} from 'vue';
 import ParentComponent from './ParentComponent.vue'
@@ -42,15 +42,31 @@ const countClass = computed(() => {
 });
 /* Parte Contador fin*/
 
-/* Parte v-for inicio*/
+/* Parte v-for y v-cloak inicio*/
 
-const tareas = ref([
-  { id: 1, nombre: "Aprender Vue Router", completada: true },
-  { id: 2, nombre: "Usar la Composition API", completada: true },
-  { id: 3, nombre: "Aprender Vue", completada: false },
-]);
+const tareas = ref([]);
+const cargando = ref(true);
 
-/* Parte v-for fin*/
+// Simulamos una carga de datos con retraso
+const cargarTareas = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { id: 1, nombre: "Entender la estructura", completada: true },
+        { id: 2, nombre: "Importar Componentes", completada: false },
+        { id: 3, nombre: "Aprender Vue", completada: false },
+      ]);
+    }, 2000); // 2 segundos de retraso
+  });
+};
+
+onMounted(async () => {
+  tareas.value = await cargarTareas();
+  cargando.value = false;
+});
+
+/* Parte v-for y v-cloak fin*/
+
 </script>
 
 <template>
@@ -91,27 +107,25 @@ const tareas = ref([
 
   </div>
 
-<!--/* Parte Reactive fin*/-->
+<!--/* Parte Reactive fin**/-->
 <!--/* Parte Provide inicio*/-->
           
         <div class="provide" v-else-if = "route.path === '/directivas/provide'">
         <ParentComponent/>
         </div>
 <!--/* Parte Provide fin*/-->
-
 <!--/* Parte v-for inicio*/-->
-
-  <div class="v-for" v-if="route.path === '/directivas/v-for'">
-  <h1>Lista de tareas</h1>
-  <ul>
-    <li v-for="(tarea, index) in tareas" :key="tarea.id">
-      {{ index + 1 }}. {{ tarea.nombre }} - {{ tarea.completada ? "Completada" : "Pendiente" }}
-    </li>
-  </ul>
+<div class="v-for" v-if="route.path === '/directivas/v-for'">
+  <div v-cloak>
+    <h2 class="title-tareas">Lista de tareas</h2>
+    <p v-if="cargando">Cargando tareas...</p>
+    <ul v-else>
+      <li v-for="(tarea, index) in tareas" :key="tarea.id">
+        {{ index + 1 }}. {{ tarea.nombre }} - {{ tarea.completada ? "Completada" : "Pendiente" }}
+      </li>
+    </ul>
+  </div>
 </div>
-
-
-
 <!--/* Parte v-for fin*/-->
     </div>
 
@@ -299,9 +313,17 @@ li {
   color: white;
 }
 
+.title-tareas{
+  color: white;
+  font-size: 2rem;
+  margin-left: -10rem;
+}
+
 /*Parte v-for fin */
-
-
-
+/*Parte v-cloak inicio */
+[v-cloak] {
+  display: none;
+}
+/*Parte v-cloak fin */
 
 </style>
