@@ -12,13 +12,15 @@ const handleMessage = (msg) => {
   console.log('Message from Child:', msg); // Log the message received from the Child
 };
 
+provide('greetingMessage', 'Hello from the parent');
+
 </script>
 
 <template>
     <div class="t">
       <h2>Props</h2>
       <br>
-      <h3> // PROPS: used to send data from the parent to the child component</h3>      
+      <h3> // PROPS: used to send data from the parent to the child component & display it</h3>      
 
     <!-- Pasar el dato message como prop al hijo -->
       <Props message="Hello, Child!" />
@@ -35,7 +37,7 @@ const handleMessage = (msg) => {
 
     <div class="t">
 
-        <h2>Testing Main App</h2>
+        <h2>Provide & Inject</h2>
         <br>
       <h3> // PROVIDE: The Parent shares data with any Child component, without having to pass it through every level.<br>
         // INJECT: it's to inject & import data from the father to the child.
@@ -78,7 +80,6 @@ const handleMessage = (msg) => {
 div {
     padding-top: 20px;
     color: green;
-
   }
 
 div h2 {
