@@ -42,14 +42,22 @@ const router = createRouter({
       name: 'Parte D',
       component: ParteDView
     },
-    {path : '/directivas/ref-computed',
+    {
+      path : '/directivas/ref-computed',
     name : 'Ref y Computed',
     component:DirectivasView,
     },
-    {path : '/directivas/reactive',
+    {
+      path : '/directivas/reactive',
       name : 'Reactive',
       component:DirectivasView,
     },
+    { 
+      path: '/directivas/provide',
+      name : 'Provide',
+      component:DirectivasView,
+
+    }
     
   ],
 })
