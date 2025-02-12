@@ -26,7 +26,7 @@ const toggleDirectivasMenu = () => {
             <li><RouterLink to="/directivas/ref-computed" @click="closeMenu">Ref-Computed</RouterLink></li>
             <li><RouterLink to="/directivas/reactive" @click="closeMenu">Reactive</RouterLink></li>
             <li><RouterLink to="/directivas/provide" @click="closeMenu">Provide And Inject</RouterLink></li>
-            <li><RouterLink to="/directivas/v-for" @click="closeMenu">Ejemplo V-for</RouterLink></li>
+            <li><RouterLink to="/directivas/v-for" @click="closeMenu">Ejemplo v-for Y v-Cloak</RouterLink></li>
           </ul>
         </li>
         <li><RouterLink to="/parte-c">Parte C</RouterLink></li>
