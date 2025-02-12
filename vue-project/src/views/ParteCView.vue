@@ -2,6 +2,7 @@
 import OptionsAPI from '@/components/OptionsAPI.vue'
 import CompositionAPI from '@/components/CompositionAPI.vue'
 import SetupExportDefault from '@/components/SetupExportDefault.vue';
+import ParentC from '@/components/ParentC.vue';
 </script>
 <template>
     <main>
@@ -16,12 +17,16 @@ import SetupExportDefault from '@/components/SetupExportDefault.vue';
             <SetupExportDefault />
         </div>
         
+        <h2>Parent/Child</h2>
+        <div class="contenedor">
+            <ParentC />
+        </div>
     </main>
 
 
 
 </template>
-<style>
+<style scoped>
 body {
     background-color: rgb(15, 14, 15);
 }
