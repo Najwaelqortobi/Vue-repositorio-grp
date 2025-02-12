@@ -57,6 +57,10 @@ const router = createRouter({
       name : 'Provide',
       component:DirectivasView,
 
+    },
+    { path: '/directivas/v-for',
+      name : 'v-for',
+      component : DirectivasView,
     }
     
   ],

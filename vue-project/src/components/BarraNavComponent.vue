@@ -20,12 +20,13 @@ const toggleDirectivasMenu = () => {
       <ul>
         <li><RouterLink to="/parte-a">Parte A</RouterLink></li>
         <li class="dropdown">
-          <RouterLink to="/directivas" @click="toggleDirectivasMenu">Directivas</RouterLink>
+          <RouterLink to="/directivas" @click="toggleDirectivasMenu">Componentes Rutas y Directivas</RouterLink>
           <!-- Menú desplegable -->
           <ul v-if="showDirectivasMenu" class="dropdown-menu">
             <li><RouterLink to="/directivas/ref-computed" @click="closeMenu">Ref-Computed</RouterLink></li>
             <li><RouterLink to="/directivas/reactive" @click="closeMenu">Reactive</RouterLink></li>
             <li><RouterLink to="/directivas/provide" @click="closeMenu">Provide And Inject</RouterLink></li>
+            <li><RouterLink to="/directivas/v-for" @click="closeMenu">Ejemplo V-for</RouterLink></li>
           </ul>
         </li>
         <li><RouterLink to="/parte-c">Parte C</RouterLink></li>

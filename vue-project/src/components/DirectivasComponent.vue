@@ -41,6 +41,16 @@ const countClass = computed(() => {
     return 'low';
 });
 /* Parte Contador fin*/
+
+/* Parte v-for inicio*/
+
+const tareas = ref([
+  { id: 1, nombre: "Aprender Vue Router", completada: true },
+  { id: 2, nombre: "Usar la Composition API", completada: true },
+  { id: 3, nombre: "Aprender Vue", completada: false },
+]);
+
+/* Parte v-for fin*/
 </script>
 
 <template>
@@ -88,11 +98,23 @@ const countClass = computed(() => {
         <ParentComponent/>
         </div>
 <!--/* Parte Provide fin*/-->
+
+<!--/* Parte v-for inicio*/-->
+
+  <div class="v-for" v-if="route.path === '/directivas/v-for'">
+  <h1>Lista de tareas</h1>
+  <ul>
+    <li v-for="(tarea, index) in tareas" :key="tarea.id">
+      {{ index + 1 }}. {{ tarea.nombre }} - {{ tarea.completada ? "Completada" : "Pendiente" }}
+    </li>
+  </ul>
+</div>
+
+
+
+<!--/* Parte v-for fin*/-->
     </div>
 
-
-
-    
 </template>
 
 
@@ -253,9 +275,31 @@ p {
   font-size: 14px;
 }
 
-
-
 /*Parte reactive fin */
+
+/*Parte v-for inicio */
+
+.v-for {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #3498db;
+  border-radius: 5px;
+  color: white;
+}
+
+/*Parte v-for fin */
 
 
 
