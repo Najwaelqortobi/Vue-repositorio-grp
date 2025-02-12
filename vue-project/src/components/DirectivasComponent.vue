@@ -47,7 +47,6 @@ const countClass = computed(() => {
 const tareas = ref([]);
 const cargando = ref(true);
 
-// Simulamos una carga de datos con retraso
 const cargarTareas = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
