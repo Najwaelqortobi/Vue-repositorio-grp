@@ -5,8 +5,6 @@ import {reactive} from 'vue';
 import ParentComponent from './ParentComponent.vue'
 
 const route = useRoute();
-
-
 /* Esto por el contador*/
 const count = ref(0);
 /* Esto por el contador*/
@@ -65,6 +63,13 @@ onMounted(async () => {
 });
 
 /* Parte v-for y v-cloak fin*/
+
+
+
+
+/* Esto por el v-html*/
+const mensaje = '<em>Este es un mensaje con HTML</em></p>';
+
 
 </script>
 
@@ -126,6 +131,13 @@ onMounted(async () => {
   </div>
 </div>
 <!--/* Parte v-for fin*/-->
+
+
+
+
+<!--/* Es la parte del v-html inicio*/-->
+<div class="html" v-html="mensaje"  v-if="route.path ==='/directivas/v-html'"></div>
+<!--/* Es la parte del v-html fin*/-->
     </div>
 
 </template>
@@ -320,6 +332,18 @@ li {
 [v-cloak] {
   display: none;
 }
+
+.html{
+  margin-left: 8rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #2c3e50;
+  width: 70%;
+  color: wheat;
+  font-size: 3rem;
+}
+
 
 
 </style>

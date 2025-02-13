@@ -61,7 +61,12 @@ const router = createRouter({
     { path: '/directivas/v-for',
       name : 'v-for',
       component : DirectivasView,
-    }
+    },
+    {
+      path : '/directivas/v-html',
+      name : 'v-html',
+      component : DirectivasView,
+    },
     
   ],
 })
