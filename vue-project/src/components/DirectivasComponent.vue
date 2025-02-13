@@ -99,7 +99,7 @@ onMounted(async () => {
             v-model="user.name" 
             placeholder="Change Name"
             class="name-input"
-          /> <!--mediante el V-model lo que se muestra en el h2 es lo que se escribe en el input en el v-model =user.name es lo que tenemos puesto en el h2-->
+          /> 
         </div>
       </div>
       </div>
@@ -132,7 +132,7 @@ onMounted(async () => {
 
 
 <style scoped>
-/*Parte contador inicio */
+
 .container {
     position: relative;
     top: 30%;
@@ -206,9 +206,7 @@ p {
 .medium { color: #f39c12; }
 .high { color: #e74c3c; }
 
-/*Parte contador fin */
 
-/*Parte reactive inicio */
 .card {
     position: absolute;
     left: 20%;
@@ -288,9 +286,9 @@ p {
   font-size: 14px;
 }
 
-/*Parte reactive fin */
 
-/*Parte v-for inicio */
+
+
 
 .v-for {
   font-family: Arial, sans-serif;
@@ -318,11 +316,10 @@ li {
   margin-left: -10rem;
 }
 
-/*Parte v-for fin */
-/*Parte v-cloak inicio */
+
 [v-cloak] {
   display: none;
 }
-/*Parte v-cloak fin */
+
 
 </style>
