@@ -36,7 +36,7 @@ const reset = () => {
   </div>
 </template>
 
-<style>
+<style scoped>
 
 button {
   margin: 10px 0 0 15px;

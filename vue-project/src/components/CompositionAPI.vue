@@ -19,7 +19,7 @@ const disminuir = () => {
     <button @click="disminuir">Disminuir</button>
   </div>
 </template>
-<style>
+<style scoped>
 button {
   font-size: 1rem;
   font-family: monospace;
