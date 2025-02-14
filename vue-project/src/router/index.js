@@ -43,7 +43,7 @@ const router = createRouter({
       component: ParteDView
     },
     {
-      path : '/directivas/ref-computed',
+    path : '/directivas/ref-computed',
     name : 'Ref y Computed',
     component:DirectivasView,
     },

@@ -19,7 +19,6 @@ const route = useRoute();
     </div>
     <RouterView />
   </div>
- 
 
 </template>
 

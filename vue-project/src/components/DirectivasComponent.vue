@@ -19,7 +19,6 @@ const updateAge = ()=>{
     user.age++;
 }
 
-
 /* Esto por la parte reactive*/
 
 /* Parte Contador inicio*/
@@ -41,7 +40,6 @@ const countClass = computed(() => {
 /* Parte Contador fin*/
 
 /* Parte v-for y v-cloak inicio*/
-
 const tareas = ref([]);
 const cargando = ref(true);
 
@@ -63,10 +61,6 @@ onMounted(async () => {
 });
 
 /* Parte v-for y v-cloak fin*/
-
-
-
-
 /* Esto por el v-html*/
 const mensaje = '<em>Este es un mensaje con HTML</em></p>';
 
@@ -131,10 +125,6 @@ const mensaje = '<em>Este es un mensaje con HTML</em></p>';
   </div>
 </div>
 <!--/* Parte v-for fin*/-->
-
-
-
-
 <!--/* Es la parte del v-html inicio*/-->
 <div class="html" v-html="mensaje"  v-if="route.path ==='/directivas/v-html'"></div>
 <!--/* Es la parte del v-html fin*/-->
@@ -144,7 +134,6 @@ const mensaje = '<em>Este es un mensaje con HTML</em></p>';
 
 
 <style scoped>
-
 .container {
     position: relative;
     top: 30%;
@@ -259,7 +248,6 @@ p {
 .user-info {
   flex-grow: 1;
 }
-
 
 
 .age {
