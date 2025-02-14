@@ -10,6 +10,7 @@ const sendMessageToParent = () => {
 <!-- ChildComponent.vue -->
 <template>
   <!-- Button to emit an event to Parent -->
+   
   <button @click="sendMessageToParent">Send Message to Parent</button>
 </template>
 
