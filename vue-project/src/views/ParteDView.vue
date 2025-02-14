@@ -22,7 +22,6 @@ provide('greetingMessage', 'Hello from the parent');
       <br>
       <h3> // PROPS: used to send data from the parent to the child component & display it</h3>      
 
-    <!-- Pasar el dato message como prop al hijo -->
       <Props message="Hello, Child!" />
     </div>
   
@@ -60,7 +59,7 @@ provide('greetingMessage', 'Hello from the parent');
         <h2>Computed Properties</h2>
         <br>
       <h3> // COMPUTED: Is being used when you need a value that automatically updates based on onther data</h3>      
-        <computed />
+        <Computed />
 
     </div>
   
@@ -69,7 +68,7 @@ provide('greetingMessage', 'Hello from the parent');
         <h2>Watch & WatchEffect</h2>
         <br>
         <h3> // Use watch when you want to track changes in a value and perform an action</h3> 
-      <watch />
+      <Watch />
 
     </div>
   
