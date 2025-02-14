@@ -5,8 +5,6 @@ import {reactive} from 'vue';
 import ParentComponent from './ParentComponent.vue'
 
 const route = useRoute();
-
-
 /* Esto por el contador*/
 const count = ref(0);
 /* Esto por el contador*/
@@ -66,6 +64,13 @@ onMounted(async () => {
 
 /* Parte v-for y v-cloak fin*/
 
+
+
+
+/* Esto por el v-html*/
+const mensaje = '<em>Este es un mensaje con HTML</em></p>';
+
+
 </script>
 
 <template>
@@ -99,7 +104,7 @@ onMounted(async () => {
             v-model="user.name" 
             placeholder="Change Name"
             class="name-input"
-          /> <!--mediante el V-model lo que se muestra en el h2 es lo que se escribe en el input en el v-model =user.name es lo que tenemos puesto en el h2-->
+          /> 
         </div>
       </div>
       </div>
@@ -126,13 +131,20 @@ onMounted(async () => {
   </div>
 </div>
 <!--/* Parte v-for fin*/-->
+
+
+
+
+<!--/* Es la parte del v-html inicio*/-->
+<div class="html" v-html="mensaje"  v-if="route.path ==='/directivas/v-html'"></div>
+<!--/* Es la parte del v-html fin*/-->
     </div>
 
 </template>
 
 
 <style scoped>
-/*Parte contador inicio */
+
 .container {
     position: relative;
     top: 30%;
@@ -206,9 +218,7 @@ p {
 .medium { color: #f39c12; }
 .high { color: #e74c3c; }
 
-/*Parte contador fin */
 
-/*Parte reactive inicio */
 .card {
     position: absolute;
     left: 20%;
@@ -288,9 +298,9 @@ p {
   font-size: 14px;
 }
 
-/*Parte reactive fin */
 
-/*Parte v-for inicio */
+
+
 
 .v-for {
   font-family: Arial, sans-serif;
@@ -318,11 +328,22 @@ li {
   margin-left: -10rem;
 }
 
-/*Parte v-for fin */
-/*Parte v-cloak inicio */
+
 [v-cloak] {
   display: none;
 }
-/*Parte v-cloak fin */
+
+.html{
+  margin-left: 8rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #2c3e50;
+  width: 70%;
+  color: wheat;
+  font-size: 3rem;
+}
+
+
 
 </style>

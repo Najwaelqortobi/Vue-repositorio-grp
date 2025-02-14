@@ -1,11 +1,7 @@
 <script setup>
 import { inject } from 'vue';
 
-//Nota : la idea es que en el child cogemos las funcionalidades del padre
-//y en el padre recibimos los cambios del child
 
-// Inyectar el contador y la función
-// Lo inyectamos para que coje la funcion del padre
 const count = inject('count');
 const incrementCount = inject('incrementCount');
 </script>

@@ -4,8 +4,7 @@
 import { ref, provide } from 'vue';
 import ChildComponent from './ChildComponent.vue';
 
-//Nota : la idea es que en el child cogemos las funcionalidades del padre
-//y en el padre recibimos los cambios del child
+
 
 const count = ref(0);
 
@@ -13,8 +12,7 @@ const incrementCount = () => {
   count.value++;
 };
 
-// Proporciona el valor 'count' de la variable count
-//el provide para que coge el cambio del hijo
+
 provide('count', count);
 provide('incrementCount', incrementCount);
 </script>
