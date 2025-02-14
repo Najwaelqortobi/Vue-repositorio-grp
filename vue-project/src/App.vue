@@ -12,7 +12,7 @@ const route = useRoute();
     <div v-if="route.path === '/welcome'" class="nav-bar">
       <nav>
         <RouterLink to="/Home">Parte A</RouterLink>
-        <RouterLink to="/Directivas">Componentes Rutas y Directivas</RouterLink>
+        <RouterLink to="/directivas">Componentes Rutas y Directivas</RouterLink>
         <RouterLink to="/Parte-c">Parte C</RouterLink>
         <RouterLink to="/Parte-d">Parte D</RouterLink>
       </nav>
