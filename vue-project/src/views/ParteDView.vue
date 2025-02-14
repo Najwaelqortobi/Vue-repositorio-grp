@@ -31,7 +31,7 @@ provide('greetingMessage', 'Hello from the parent');
       <h2>Emits</h2>
       <br>
       <h3> // EMITS: send data or an event from child to parent</h3>      
-      <Emits message="Hello, Child!" @sendMessage="handleMessage" />
+      <Emits @sendMessage="handleMessage" />
 
     </div>
 
@@ -68,7 +68,7 @@ provide('greetingMessage', 'Hello from the parent');
 
         <h2>Watch & WatchEffect</h2>
         <br>
-      <h3> // WATCH: send data or an event from child to parent</h3>      
+        <h3> // Use watch when you want to track changes in a value and perform an action</h3> 
       <watch />
 
     </div>
