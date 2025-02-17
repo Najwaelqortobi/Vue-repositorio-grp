@@ -6,7 +6,7 @@ const { users, isLoading, error, fetchUsers } = useUsers();
 
 <template>
   <div>
-    <h1>Lista personas</h1>
+    <h1>Lista personas // Composable </h1>
 
     <button @click="fetchUsers" :disabled="isLoading">
       {{ isLoading ? "Cargando..." : "Recargar Usuarios" }}
@@ -15,9 +15,13 @@ const { users, isLoading, error, fetchUsers } = useUsers();
     <p v-if="error" class="error">{{ error }}</p>
 
     <ul v-else class="contenedor">
-      <li v-for="user in users" :key="user.login.uuid" class="card">
-        <img :src="user.picture.large" :alt="user.name.first" />
-        <p>{{ user.name.first }} {{ user.name.last }}</p>
+      <li v-for="persona in users" :key="persona.login.uuid" class="card">
+        <img :src="persona.picture.large" :alt="persona.name.first" />
+        <p>{{ persona.name.first }} {{ persona.name.last }}</p>
+        <p class="email">{{ persona.email }}</p>
+        <!-- <p>{{ persona.gender }}</p> -->
+        <p v-if="persona.gender=='male'">Sexo: Masculino</p>
+        <p v-else>Sexo: Femenino</p>
       </li>
     </ul>
   </div>
@@ -28,7 +32,10 @@ ul {
   list-style: none;
   margin-left: 0;
 }
-
+.email {
+    font-size: 0.8rem;
+    color: #2c3e50;
+}
 .contenedor {
   width: 80%;
   height: auto;
