@@ -34,7 +34,6 @@ provide('greetingMessage', 'Hello from the parent');
       <Emits @sendMessage="handleMessage" />
 
     </div>
-
     <div class="t">
 
         <h2>Provide & Inject</h2>
@@ -50,7 +49,7 @@ provide('greetingMessage', 'Hello from the parent');
 
         <h2>Ref & Reactive</h2>
         <br>
-      <h3> // REF is being used to primary value such as a number and REACTIVE for objects or arrays</h3>      
+      <h3> // REF is being used to primary value such as a number, boolean, string and REACTIVE for objects or arrays</h3>      
       <Reactivity />
 
     </div>
@@ -59,7 +58,7 @@ provide('greetingMessage', 'Hello from the parent');
 
         <h2>Computed Properties</h2>
         <br>
-      <h3> // COMPUTED: Is being used when you need a value that automatically updates based on onther data</h3>      
+      <h3> // COMPUTED: Is being used when you need a value that automatically updates based on other data</h3>      
         <Computed />
 
     </div>
