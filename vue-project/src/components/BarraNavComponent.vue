@@ -30,8 +30,8 @@ const toggleDirectivasMenu = () => {
              <li><RouterLink to="/directivas/v-html" @click="closeMenu">Ejemplo v-html</RouterLink></li>
           </ul>
         </li>
-        <li><RouterLink to="/parte-c">Composition API VS Option API</RouterLink></li>
-        <li><RouterLink to="/parte-d">Comunicación entre Componentes</RouterLink></li>
+        <li><RouterLink to="/Composition-Option API">Composition API VS Option API</RouterLink></li>
+        <li><RouterLink to="/component communication">Comunicación entre Componentes</RouterLink></li>
       </ul>
     </nav>
   </div>
@@ -42,6 +42,7 @@ const toggleDirectivasMenu = () => {
     .navigation {
         display: flex;
         margin-left: 30rem;
+        
     }
     ul{
         list-style: none;
