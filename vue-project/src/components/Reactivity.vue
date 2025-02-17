@@ -4,8 +4,8 @@ import { ref, reactive } from 'vue';
 const counter = ref(0);
 
 const user = reactive({
-  user: 'Youssef',
-  age: 20,
+  name: 'Youssef',
+  age: 21,
 });
 
 const increment = () => {
@@ -20,7 +20,7 @@ const decrement = () => {
 
 const reset = () => {
   counter.value = 0;
-  user.age = 20;
+  user.age = 21;
 }
 
 </script>
@@ -28,7 +28,7 @@ const reset = () => {
 <template>
   <div>
     <p>Counter {{ counter }}</p>
-    <p>User: {{ user.name }} age {{ user.age }}</p>
+    <p>User: {{ user.name }}, age {{ user.age }}</p>
     <button @click="increment">Incrementar</button>
     <button @click="decrement">Disminuir</button>
     <button @click="reset">Restear</button>

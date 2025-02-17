@@ -13,6 +13,11 @@ watch(count, (newVal, oldVal) => {
 const increment = () => {
   count.value++; 
 };
+
+const decrement = () => {
+  count.value--;
+}
+
 </script>
 
 <template>
@@ -22,6 +27,7 @@ const increment = () => {
     
     <!-- Button to increment the count -->
     <button @click="increment">Increment</button>
+    <button @click="decrement">Decrement</button>
   </div>
 </template>
 
