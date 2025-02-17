@@ -6,6 +6,7 @@ import ProvideInject from "../components/ProvideInject.vue";
 import Reactivity from "../components/Reactivity.vue";
 import Computed from "../components/Computed.vue";
 import Watch from "../components/Watch.vue";
+import WatchEffect from "../components/watchEffect.vue";
 
 // Emits Handle the message sent from the Child
 const handleMessage = (msg) => {
@@ -65,12 +66,22 @@ provide('greetingMessage', 'Hello from the parent');
   
     <div class="t">
 
-        <h2>Watch & WatchEffect</h2>
+        <h2>Watch</h2>
         <br>
         <h3> // Use watch when you want to track changes in a value and perform an action</h3> 
       <Watch />
 
     </div>
+
+    <div class="t">
+
+    <h2>WatchEffect</h2>
+    <br>
+    <h3> // Cuando quieres que el código se ejecute automáticamente cada vez que cualquier variable reactiva usada dentro cambie</h3> 
+    <WatchEffect />
+
+    </div>
+
   
   </template>
   
