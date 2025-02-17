@@ -33,13 +33,13 @@ const router = createRouter({
       component: DirectivasView,
     },
     {
-      path: '/parte-c',
-      name: 'Parte C',
+      path: '/Composition-Option API',
+      name: 'Composition-Option API',
       component: () => import('../views/ParteCView.vue'),
     },
     {
-      path: '/parte-d',
-      name: 'Parte D',
+      path: '/component communication',
+      name: 'component communication',
       component: ParteDView
     },
     {
