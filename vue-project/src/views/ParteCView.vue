@@ -37,7 +37,12 @@ body {
     /* background-color: rgb(15, 14, 15); */
     /* border: #f3ba00 solid 2px; */
 }
-
+.navigation {
+        display: flex;
+        margin-left: 0rem;
+        border: red solid 2px
+        
+}
 main {
     width: 100%;
     /* border: green solid 2px; */
