@@ -27,7 +27,7 @@ const { users, isLoading, error, fetchUsers } = useUsers();
   </div>
 </template>
 
-<style>
+<style scoped>
 ul {
   list-style: none;
   margin-left: 0;
