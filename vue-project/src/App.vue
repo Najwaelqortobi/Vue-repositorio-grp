@@ -13,8 +13,8 @@ const route = useRoute();
       <nav>
         <!-- <RouterLink to="/Home">Parte A</RouterLink> -->
         <RouterLink to="/directivas">Componentes Rutas y Directivas</RouterLink>
-        <RouterLink to="/Parte-c">Composition API VS Option API</RouterLink>
-        <RouterLink to="/Parte-d">Comunicación entre Componentes</RouterLink>
+        <RouterLink to="/Composition-Option API">Composition API VS Option API</RouterLink>
+        <RouterLink to="/component communication">Comunicación entre Componentes</RouterLink>
       </nav>
     </div>
     <RouterView />

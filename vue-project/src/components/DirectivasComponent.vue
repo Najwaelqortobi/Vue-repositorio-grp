@@ -136,8 +136,8 @@ const mensaje = '<em>Este es un mensaje con HTML</em></p>';
 <style scoped>
 .container {
     position: relative;
-    top: 30%;
-    left: 35%;
+    top: 20%;
+    left: 27%;
   
 }
 .counter-wrapper {
