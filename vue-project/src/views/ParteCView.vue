@@ -1,8 +1,10 @@
 <script setup>
 import OptionsAPI from '@/components/OptionsAPI.vue'
 import CompositionAPI from '@/components/CompositionAPI.vue'
-import SetupExportDefault from '@/components/SetupExportDefault.vue';
-import ParentC from '@/components/ComponentePadre.vue';
+// import SetupExportDefault from '@/components/SetupExportDefault.vue';
+import ComponentePadre from '@/components/ComponentePadre.vue';
+import SetupLista from '@/components/SetupLista.vue';
+import ComposableLista from '@/components/ComposableLista.vue'
 </script>
 <template>
     <main>
@@ -12,14 +14,18 @@ import ParentC from '@/components/ComponentePadre.vue';
             <OptionsAPI />
     
         </div>
-        <h2>Setup con Export Default</h2>
+        <h2>Setup() [export default - return]</h2>
         <div class="contenedor">
-            <SetupExportDefault />
+            <SetupLista/>
+        </div>
+        <h2>Composable</h2>
+        <div class="contenedor">
+            <ComposableLista/>
         </div>
         
         <h2>Parent/Child</h2>
         <div class="contenedor">
-            <ParentC />
+            <ComponentePadre />
         </div>
     </main>
 
@@ -32,8 +38,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(15, 14, 15);
-    border: #f3ba00 solid 2px;
+    /* background-color: rgb(15, 14, 15); */
+    /* border: #f3ba00 solid 2px; */
 }
 
 main {
@@ -41,15 +47,18 @@ main {
     /* border: green solid 2px; */
     margin:2rem 0;
     color: white;
+    padding-bottom: 1rem;
+    margin-left:15rem;
 }
 .contenedor {
     display:flex;
     justify-content: center;
-    border: #dd0030 solid 0.10rem;
+    border: #3498db solid 0.1rem;
     width: 100%;
-    /* border-radius:0.3rem; */
+    border-radius:0.3rem;
     min-height: 10rem;
     padding: 1rem;
+    margin-bottom: 5rem;
 
 }
 h2 {
@@ -59,8 +68,23 @@ h2 {
 }
 h3 {
     font-size: 1.2rem;
-    color: #f0c22d;
+    color: #3498db;
     font-family: monospace;
+}
+button {
+  font-size: 1.5rem;
+  /* font-family: monospace; */
+  color: white;
+  height: 4rem;
+  min-width: 10rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  margin: 0 1rem;
+  background-color:#2c3e50;
+}
+button:hover {
+  background-color: #3498db;
 }
 
 @media (min-width: 1024px) {
