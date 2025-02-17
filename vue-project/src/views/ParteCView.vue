@@ -3,6 +3,7 @@ import OptionsAPI from '@/components/OptionsAPI.vue'
 import CompositionAPI from '@/components/CompositionAPI.vue'
 import SetupExportDefault from '@/components/SetupExportDefault.vue';
 import ComponentePadre from '@/components/ComponentePadre.vue';
+import SetupLista from '@/components/SetupLista.vue';
 </script>
 <template>
     <main>
@@ -12,9 +13,10 @@ import ComponentePadre from '@/components/ComponentePadre.vue';
             <OptionsAPI />
     
         </div>
-        <h2>Setup con Export Default</h2>
+        <h2>Setup() [export default - return]</h2>
         <div class="contenedor">
-            <SetupExportDefault />
+            <!-- <SetupExportDefault /> -->
+            <SetupLista/>
         </div>
         
         <h2>Parent/Child</h2>
@@ -32,8 +34,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(15, 14, 15);
-    border: #f3ba00 solid 2px;
+    /* background-color: rgb(15, 14, 15); */
+    /* border: #f3ba00 solid 2px; */
 }
 
 main {
