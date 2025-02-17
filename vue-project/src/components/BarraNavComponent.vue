@@ -61,8 +61,8 @@ const toggleDirectivasMenu = () => {
 .dropdown-menu {
   z-index: 2;
   position: absolute;
-  top: 100%; /*Coloca la parte superior del menú desplegable justo debajo del contenedor .dropdown.*/
-  left: 0;/*Alinea el borde izquierdo del menú desplegable con el borde izquierdo del contenedor .dropdown.*/
+  top: 100%; 
+  left: 0;
   background-color: #2c3e50;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -75,7 +75,7 @@ const toggleDirectivasMenu = () => {
   white-space: nowrap;
   color: aliceblue;
   text-decoration: none;
-  display: block; /* lo cambio a elemento de bloque para que ocupa todo el ancho*/
+  display: block; 
 }
 
 
