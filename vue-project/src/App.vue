@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-/*useRoute es una funcion para verificar la ruta para la condicion que puse abajo*/
+
 import BarraNavComponent from './components/BarraNavComponent.vue'
 
 const route = useRoute();
@@ -32,10 +32,10 @@ const route = useRoute();
     width :100%;
 }
 body,html {
-  background-color: #1a2a3a; /* Azul oscuro profundo */
+  background-color: #1a2a3a; 
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Asegura un modelo de caja consistente */
+  box-sizing: border-box; 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   height: 100%;
 }
@@ -45,7 +45,7 @@ body,html {
   display: flex;
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 40%;
   margin-right: 6rem;
   background-color: #2c3e50; 
   padding: 2rem;
@@ -70,6 +70,7 @@ nav a {
   font-weight: 500;
   transition: all 0.3s ease;
   font-size: 1rem;
+  display: block;
 }
 
 /* nav a:hover {

@@ -42,6 +42,7 @@ const toggleDirectivasMenu = () => {
     .navigation {
         display: flex;
         margin-left: 30rem;
+        
     }
     ul{
         list-style: none;
