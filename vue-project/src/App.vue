@@ -11,10 +11,10 @@ const route = useRoute();
     <BarraNavComponent v-if="route.path !== '/welcome'" />
     <div v-if="route.path === '/welcome'" class="nav-bar">
       <nav>
-        <RouterLink to="/Home">Parte A</RouterLink>
+        <!-- <RouterLink to="/Home">Parte A</RouterLink> -->
         <RouterLink to="/directivas">Componentes Rutas y Directivas</RouterLink>
-        <RouterLink to="/Parte-c">Parte C</RouterLink>
-        <RouterLink to="/Parte-d">Parte D</RouterLink>
+        <RouterLink to="/Parte-c">Composition API VS Option API</RouterLink>
+        <RouterLink to="/Parte-d">Comunicación entre Componentes</RouterLink>
       </nav>
     </div>
     <RouterView />

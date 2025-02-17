@@ -18,7 +18,7 @@ const toggleDirectivasMenu = () => {
   <div class="container">
     <nav class="navigation">
       <ul>
-        <li><RouterLink to="/parte-a">Parte A</RouterLink></li>
+        <!-- <li><RouterLink to="/parte-a">Parte A</RouterLink></li> -->
         <li class="dropdown">
           <RouterLink to="/directivas" @click="toggleDirectivasMenu">Componentes Rutas y Directivas</RouterLink>
           <!-- Menú desplegable -->
@@ -30,8 +30,8 @@ const toggleDirectivasMenu = () => {
              <li><RouterLink to="/directivas/v-html" @click="closeMenu">Ejemplo v-html</RouterLink></li>
           </ul>
         </li>
-        <li><RouterLink to="/parte-c">Parte C</RouterLink></li>
-        <li><RouterLink to="/parte-d">Parte D</RouterLink></li>
+        <li><RouterLink to="/parte-c">Composition API VS Option API</RouterLink></li>
+        <li><RouterLink to="/parte-d">Comunicación entre Componentes</RouterLink></li>
       </ul>
     </nav>
   </div>
