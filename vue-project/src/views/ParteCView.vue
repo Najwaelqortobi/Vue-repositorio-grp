@@ -1,9 +1,10 @@
 <script setup>
 import OptionsAPI from '@/components/OptionsAPI.vue'
 import CompositionAPI from '@/components/CompositionAPI.vue'
-import SetupExportDefault from '@/components/SetupExportDefault.vue';
+// import SetupExportDefault from '@/components/SetupExportDefault.vue';
 import ComponentePadre from '@/components/ComponentePadre.vue';
 import SetupLista from '@/components/SetupLista.vue';
+import ComposableLista from '@/components/ComposableLista.vue'
 </script>
 <template>
     <main>
@@ -15,8 +16,11 @@ import SetupLista from '@/components/SetupLista.vue';
         </div>
         <h2>Setup() [export default - return]</h2>
         <div class="contenedor">
-            <!-- <SetupExportDefault /> -->
             <SetupLista/>
+        </div>
+        <h2>Composable</h2>
+        <div class="contenedor">
+            <ComposableLista/>
         </div>
         
         <h2>Parent/Child</h2>
