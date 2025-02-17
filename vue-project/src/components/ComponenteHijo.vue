@@ -10,19 +10,25 @@
 </template>
 <style scoped>
 .tarjetaNombres{
-    background-color: #f3ba00;
-    border-radius: 2rem;
+    background-color: #c1e1f7;
+    border-radius: 0.2rem;
     min-height: 5rem;
     display:block;
-    padding: 2rem;
+    padding: 1rem;
     color:black;
     margin:1rem;
 }
 
-h4, p {
+h4 {
     padding: 1rem 0;
     font-weight: bold;
-    color: black;
+    color: #2c3e50;
   }
+
+p {
+    padding: 0.2rem 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
 </style>
 

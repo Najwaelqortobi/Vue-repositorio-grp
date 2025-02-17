@@ -2,7 +2,7 @@
 import OptionsAPI from '@/components/OptionsAPI.vue'
 import CompositionAPI from '@/components/CompositionAPI.vue'
 import SetupExportDefault from '@/components/SetupExportDefault.vue';
-import ParentC from '@/components/ComponentePadre.vue';
+import ComponentePadre from '@/components/ComponentePadre.vue';
 </script>
 <template>
     <main>
@@ -19,7 +19,7 @@ import ParentC from '@/components/ComponentePadre.vue';
         
         <h2>Parent/Child</h2>
         <div class="contenedor">
-            <ParentC />
+            <ComponentePadre />
         </div>
     </main>
 
@@ -41,15 +41,17 @@ main {
     /* border: green solid 2px; */
     margin:2rem 0;
     color: white;
+    padding-bottom: 1rem;
 }
 .contenedor {
     display:flex;
     justify-content: center;
-    border: #dd0030 solid 0.10rem;
+    border: #3498db solid 0.1rem;
     width: 100%;
-    /* border-radius:0.3rem; */
+    border-radius:0.3rem;
     min-height: 10rem;
     padding: 1rem;
+    margin-bottom: 5rem;
 
 }
 h2 {
@@ -59,7 +61,7 @@ h2 {
 }
 h3 {
     font-size: 1.2rem;
-    color: #f0c22d;
+    color: #3498db;
     font-family: monospace;
 }
 

@@ -37,7 +37,7 @@ export default {
 }
 button {
   font-size: 1.5rem;
-  font-family: monospace;
+  /* font-family: monospace; */
   color: white;
   height: 4rem;
   min-width: 10rem;
@@ -45,7 +45,10 @@ button {
   border: none;
   border-radius: 2rem;
   margin: 0 1rem;
-  background-color: #dd0030;
+  background-color:#2c3e50;
+}
+button:hover {
+  background-color: #3498db;
 }
 .contador {
   display: flex;
@@ -58,7 +61,7 @@ button {
 }
 h3 {
   padding: 1rem 0;
-  color: #f3ba00;
+  color: #3498db;
 }
 
 </style>

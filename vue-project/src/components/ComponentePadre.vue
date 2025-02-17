@@ -6,7 +6,7 @@
     <div>
         <h3>Badass characters</h3>
         <TarjetaUsuario nombre="Sandor Clegane" edad="29" />
-        <TarjetaUsuario nombre="Ser Bronn of the fu@#$&g Blackwater." edad="32" />
+        <TarjetaUsuario nombre="Sir Bronn of the fu@#$&g Blackwater." edad="32" />
         <TarjetaUsuario nombre="Lyanna Mormont (Lady Osita)" edad="13" />
     </div>
 
@@ -14,7 +14,7 @@
 <style scoped>
 h3 {
     padding: 1rem 0;
-    color: #f3ba00;
-    font-weight: bold;
+    color: #3498db;
+    
   }
 </style>
