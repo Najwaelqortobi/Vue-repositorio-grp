@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import {reactive} from 'vue';
 import ParentComponent from './ParentComponent.vue'
 
-const route = useRoute();
+const route = useRoute(); 
 /* Esto por el contador*/
 const count = ref(0);
 /* Esto por el contador*/
