@@ -1,43 +1,43 @@
 <script>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
 export default {
   setup() {
-    const users = ref([]);
-    const isLoading = ref(true);
+    const personas = ref([]);
     const error = ref(null);
 
-    async function fetchUsers() {
+    async function cargaListaFetch() {
       try {
-        const response = await fetch("https://randomuser.me/api/?results=8");
+        const response = await fetch("https://randomuser.me/api/?results=9");
         if (!response.ok) throw new Error("Error al obtener los datos");
         const data = await response.json();
-        users.value = data.results;
+        personas.value = data.results;
+        console.log(personas.value)
       } catch (err) {
         error.value = err.message;
-      } finally {
-        isLoading.value = false;
-      }
+      } 
     }
 
-    onMounted(fetchUsers);
+    cargaListaFetch();
 
-    return { users, isLoading, error };
+    return { personas, error };
   },
 };
 </script>
 
 <template>
   <div>
-    <h1>Lista de Participantes</h1>
+    <h1>Lista</h1>
 
-    <p v-if="isLoading">Cargando usuarios...</p>
     <p v-if="error" class="error">{{ error }}</p>
 
     <ul v-else class="contenedor">
-      <li v-for="user in users" :key="user.login.uuid" class="card">
-        <img :src="user.picture.large" :alt="user.name.first" />
-        <p>{{ user.name.first }} {{ user.name.last }}</p>
+
+      <li v-for="persona in personas" :key="persona.login.uuid" class="card">
+        <img :src="persona.picture.large" :alt="persona.name.first" />
+        <p>{{ persona.name.first }} {{ persona.name.last }}</p>
+        <p>Ciudad: {{ persona.location.city }}</p>
+        <p>País: {{ persona.location.country }}</p>
       </li>
     </ul>
   </div>
