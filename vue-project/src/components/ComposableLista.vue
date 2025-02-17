@@ -6,7 +6,7 @@ const { users, isLoading, error, fetchUsers } = useUsers();
 
 <template>
   <div>
-    <h1>Lista de Usuarios</h1>
+    <h1>Lista personas</h1>
 
     <button @click="fetchUsers" :disabled="isLoading">
       {{ isLoading ? "Cargando..." : "Recargar Usuarios" }}
@@ -24,15 +24,52 @@ const { users, isLoading, error, fetchUsers } = useUsers();
 </template>
 
 <style>
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
 .contenedor {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  /* background-color: rgb(207, 184, 213); */
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-flow: row wrap;
 }
 
 .card {
-  background: #eee;
-  padding: 10px;
-  border-radius: 5px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  background-color: #3498db;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  /* font-family: Ubuntu; */
+  border-radius: 0.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+button {
+  font-size: 1rem;
+  /* font-family: monospace; */
+  color: white;
+  height: 2rem;
+  min-width: 10rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  margin: 0 1rem;
+  background-color:#2c3e50;
+}
+button:hover {
+  background-color: #3498db;
 }
 </style>

@@ -71,6 +71,21 @@ h3 {
     color: #3498db;
     font-family: monospace;
 }
+button {
+  font-size: 1.5rem;
+  /* font-family: monospace; */
+  color: white;
+  height: 4rem;
+  min-width: 10rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  margin: 0 1rem;
+  background-color:#2c3e50;
+}
+button:hover {
+  background-color: #3498db;
+}
 
 @media (min-width: 1024px) {
     body {
