@@ -1,12 +1,12 @@
 import { ref, onMounted } from "vue";
 
-export function useUsers() {
+export function usePersonas() {
   const users = ref([]);
-  const isLoading = ref(false);
+  const cargando = ref(false);
   const error = ref(null);
 
-  function fetchUsers() {
-    isLoading.value = true;
+  function fetchPersonas() {
+    cargando.value = true;
     error.value = null;
 
     fetch("https://randomuser.me/api/?results=6")
@@ -23,14 +23,14 @@ export function useUsers() {
         error.value = err.message;
       })
       .finally(() => {
-        isLoading.value = false;
+        cargando.value = false;
       });
   }
 
-  // cuando esta montado
-  onMounted(fetchUsers);
+  // cuando esta
+  onMounted(fetchPersonas);
 
-  return { users, isLoading, error, fetchUsers };
+  return { users, cargando, error, fetchPersonas };
 }
 
 

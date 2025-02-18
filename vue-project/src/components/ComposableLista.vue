@@ -1,15 +1,15 @@
 <script setup>
-import { useUsers } from "@/composables/useFetchLista";
+import { usePersonas } from "@/composables/useFetchLista";
 
-const { users, isLoading, error, fetchUsers } = useUsers();
+const { users, cargando, error, fetchPersonas } = usePersonas();
 </script>
 
 <template>
   <div>
     <h1>Lista personas // Composable </h1>
 
-    <button @click="fetchUsers" :disabled="isLoading">
-      {{ isLoading ? "Cargando..." : "Recargar Usuarios" }}
+    <button @click="fetchPersonas" :disabled="cargando">
+      {{ cargando ? "Cargando..." : "Recargar Usuarios" }}
     </button>
 
     <p v-if="error" class="error">{{ error }}</p>
