@@ -27,7 +27,7 @@ export function useUsers() {
       });
   }
 
-  // Ejecutar la función al montar el componente
+  // cuando esta montado
   onMounted(fetchUsers);
 
   return { users, isLoading, error, fetchUsers };
