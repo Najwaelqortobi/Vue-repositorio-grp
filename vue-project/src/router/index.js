@@ -71,6 +71,7 @@ const router = createRouter({
     {
       path : '/profile/id:',
       component : Profile,
+      props: true
     }
   ],
 });
