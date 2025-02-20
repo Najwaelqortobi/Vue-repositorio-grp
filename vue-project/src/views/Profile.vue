@@ -20,12 +20,12 @@
       const route = useRoute();
       const userId = ref(route.params.id);
   
-      // Fake user database
+      // Programmers
       const users = [
-        { id: "1", name: "Youssef", bio: "Example of programmer 1." },
-        { id: "2", name: "Moses", bio: "Example of the programmer 2" },
-        { id: "3", name: "Najwa", bio: "Example of programmer 3" },
-        { id: "3", name: "Allan", bio: "Example of programmer 4" }
+        { id: "1", name: "Youssef", bio: "programmer 1." },
+        { id: "2", name: "Moses", bio: "programmer 2" },
+        { id: "3", name: "Najwa", bio: "programmer 3" },
+        { id: "3", name: "Allan", bio: "programmer 4" }
       ];
   
       // Find user based on ID
